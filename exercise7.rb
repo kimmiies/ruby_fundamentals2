@@ -45,3 +45,11 @@ students.delete(:cohort2)
 bitmaker_cohorts(students)
 
 puts ".........."
+
+
+
+total_students = students.each.inject(0) { |total, (cohort, number_students)| total + number_students }
+
+puts "Bitmaker has sent #{total_students} coders out into the tech world! Wow!"
+
+#Is this a trick? It works the same with or without each
