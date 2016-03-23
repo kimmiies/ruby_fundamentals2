@@ -48,8 +48,11 @@ puts ".........."
 
 
 
-total_students = students.each.inject(0) { |total, (cohort, number_students)| total + number_students }
+#total_students = students.each.inject(0) { |total, (cohort, number_students)| total + number_students }
+
+total_students = students.each.inject(0) {|cohort, number_students| cohort += number_students[1]}
 
 puts "Bitmaker has sent #{total_students} coders out into the tech world! Wow!"
 
 #Is this a trick? It works the same with or without each
+#inject creates an array of values and we can add the values in the array
